@@ -4,6 +4,51 @@
   --background-color: #efe7e5;
   --text-color: black;
 }
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container{
+  max-width: 100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.image-left-slide img{
+  display: none;
+}
+img.active{
+  display: block;
+  animation: fade 0.8s;
+  height: 200px;
+  width: 400px;
+}
+@keyframes fade{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.cont-btn{
+  width: calc(100%-40px);
+  height: auto;
+  border: 1px solid grey;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.image-right-slide{
+  margin-left: 40px;
+}
+.btn-nav{
+  font-size: 30px;
+  margin: 0 15px;
+  cursor: pointer;
+}
 
 body {
   margin: 3% 15%;
